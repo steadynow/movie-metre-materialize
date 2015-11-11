@@ -10,6 +10,7 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/movie-page.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
 <body>
   <nav class="white" role="navigation">
@@ -38,7 +39,7 @@
     <div class="section no-pad-bot">
       <div class="container">
         <br><br>
-        <h1 class="header center">The Revenant</h1>
+        <h1 class="header center has-custom-shadow">The Revenant</h1>
         <div class="row center">
           <h5 class="header col s12 light">Trends and Such Releated to this Movie</h5>
         </div>
@@ -53,6 +54,23 @@
   </div>
 
   <div class="container">
+    <div class="row">
+      <div class="col s12">
+        <ul class="tabs">
+          <li class="tab col s3"><a class="active" href="#test1">Test 1</a></li>
+          <li class="tab col s3"><a href="#test2">Test 2</a></li>
+          <li class="tab col s3"><a href="#test3">Disabled Tab</a></li>
+          <li class="tab col s3"><a href="#test4">Test 4</a></li>
+        </ul>
+      </div>
+      <div id="test1" class="col s12"><canvas id="lineChart" width="800" height="200"></canvas></div>
+      <div id="test2" class="col s12"><canvas id="chart" width="200" height="200"></canvas></div>
+      <div id="test3" class="col s12">Test 3</div>
+      <div id="test4" class="col s12">Test 4</div>
+    </div>
+  </div>
+
+  <div class="container">
       <div class="row">
         <div id="movie-detail" class="section scrollspy">
         <div class="col s12">
@@ -60,15 +78,36 @@
         </div>
 
         <div class="col s12 m3">
-          <canvas id="chart" width="200" height="200"></canvas>
+   <!--        <canvas id="chart" width="200" height="200"></canvas> -->
         </div>
         <div class="col s12 m9">
-          <canvas id="lineChart" width="800" height="200"></canvas>
+<!--           <canvas id="lineChart" width="800" height="200"></canvas> -->
         </div>
       </div>
     </div>
   </div>
 
+   <div class="container">
+    <div class="row">
+      <div class="col s12">
+        <!-- Modal Trigger -->
+        <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a>
+
+        <!-- Modal Structure -->
+        <div id="modal1" class="modal">
+          <div class="modal-content">
+            <div class="video-container">
+              <iframe width="853" height="480" src="https://www.youtube.com/embed/QRfj1VCg16Y" frameborder="0" allowfullscreen></iframe>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+            <a class="btn-floating red"><i class="material-icons">new_releases</i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
 
   <div class="container">

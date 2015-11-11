@@ -1,0 +1,6 @@
+@import "components/_prefixer";
+
+// Can output up to ten text shadows
+.has-custom-shadow {
+  @include text-shadow( #111 3px 3px 0);
+}

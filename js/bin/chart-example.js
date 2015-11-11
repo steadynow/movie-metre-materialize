@@ -3,19 +3,19 @@ var data = [
            value: 9.10,
            color: "#F7464A",
            highlight: "#FF5A5E",
-           label: "9,42%"
+           //label: "9,42%"
        },
        {
-           value: 1.90,
+           value: 20.90,
            color: "#46BFBD",
            highlight: "#5AD3D1",
-           label: "19,85%"
+           //label: "19,85%"
        },
        {
-           value: 90,
+           value: 70,
            color: "#FDB45C",
            highlight: "#FFC870",
-           label: "Yellow"
+           //label: "Yellow"
        }
    ]
 
