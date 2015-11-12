@@ -57,14 +57,16 @@
     <div class="row">
       <div class="col s12">
         <ul class="tabs">
-          <li class="tab col s3"><a class="active" href="#test1">Test 1</a></li>
-          <li class="tab col s3"><a href="#test2">Test 2</a></li>
-          <li class="tab col s3"><a href="#test3">Disabled Tab</a></li>
-          <li class="tab col s3"><a href="#test4">Test 4</a></li>
+          <li class="tab col s3"><a class="active" href="#test1">Trending</a></li>
+          <li class="tab col s3"><a href="#test2">Historical</a></li>
+          <li class="tab col s3"><a href="#test3">Critical</a></li>
+          <li class="tab col s3"><a href="#test4">Assets</a></li>
         </ul>
       </div>
       <div id="test1" class="col s12"><canvas id="lineChart" width="800" height="200"></canvas></div>
-      <div id="test2" class="col s12"><canvas id="chart" width="200" height="200"></canvas></div>
+      <div id="test2" class="col s12">
+        <canvas id="chart" width="300" height="300"></canvas>
+      </div>
       <div id="test3" class="col s12">Test 3</div>
       <div id="test4" class="col s12">Test 4</div>
     </div>
@@ -108,8 +110,6 @@
       </div>
     </div>
   </div>
-
-
   <div class="container">
     <div class="row">
       <div class="col s2">
@@ -140,6 +140,53 @@
           <div class="chip">
             Frontier
           </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col s12">
+        <ul class="collapsible">
+          <li class="active">
+            <div class="collapsible-header"><i class="material-icons">theaters</i>Movie</div>
+            <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+          </li>
+          <li>
+            <div class="collapsible-header"><i class="material-icons">movie</i>Production</div>
+            <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+          </li>
+          <li>
+            <div class="collapsible-header"><i class="mdi-av-play-shopping-bag"></i>Video Editor</div>
+            <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+          </li>
+          <li>
+            <div class="collapsible-header"><i class="material-icons">face</i>Cast</div>
+            <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col s12">
+        <div class="valign-wrapper" style="height:500px; background:rgba(0, 255, 184, 0.15);">
+          <h5 class="valign center" style="width:100%;">This should be vertically aligned</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col s3">
+         <input type="date" class="datepicker">
+        <h4 class="truncate">This is an extremely long title that will be truncated</h4>
+      </div>
+      <div class="col s9">
+        <div class="card-panel hoverable"> Hoverable Card Panel</div>
       </div>
     </div>
   </div>
