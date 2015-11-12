@@ -78,6 +78,15 @@ var data = {
 var options =
 {
 
+    // Boolean - Whether to show labels on the scale
+    scaleShowLabels: true,
+
+    // Boolean - whether or not the chart should be responsive and resize when the browser does.
+    responsive: true,
+
+    // Boolean - whether to maintain the starting aspect ratio or not when responsive, if set to false, will take up entire container
+    maintainAspectRatio: true,
+
     ///Boolean - Whether grid lines are shown across the chart
     scaleShowGridLines : true,
 
@@ -94,7 +103,7 @@ var options =
     scaleShowVerticalLines: true,
 
     //Boolean - Whether the line is curved between points
-    bezierCurve : true,
+    bezierCurve : false,
 
     //Number - Tension of the bezier curve between points
     bezierCurveTension : 0.4,
@@ -126,7 +135,71 @@ var options =
 };
 
 var context = $('#lineChart').get(0).getContext('2d');
+var chart = new Chart(context).Line(data, options);
+
+
+
+var data = {
+    labels: ["January", "February", "March", "April", "May", "June", "July"],
+    datasets: [
+        {
+            label: "Facebook Likes",
+            fillColor: "#dfe3ee",
+            strokeColor: "rgba(220,220,220,1)",
+            pointColor: "#8b9dc3",
+            pointStrokeColor: "#3b5998",
+            pointHighlightFill: "#fff",
+            pointHighlightStroke: "rgba(220,220,220,1)",
+            data: [65, 59, 80, 81, 56, 75, 80]
+        }
+    ]
+};
+
+
+var context = $('#fblineChart').get(0).getContext('2d');
 //var chart = new Chart(context).Pie(data, options);
 var chart = new Chart(context).Line(data, options);
+
+
+var data = {
+    labels: ["January", "February", "March", "April", "May", "June", "July"],
+    datasets: [
+        {
+            label: "Twitter Followers",
+            fillColor: "#e1e8ed",
+            strokeColor: "#292f33",
+            pointColor: "#55acee",
+            pointStrokeColor: "#3b5998",
+            pointHighlightFill: "#fff",
+            pointHighlightStroke: "rgba(220,220,220,1)",
+            data: [5, 9, 8, 8, 5, 7, 8]
+        }
+    ]
+};
+
+var context = $('#twitterlineChart').get(0).getContext('2d');
+var chart = new Chart(context).Line(data, options);
+
+
+var data = {
+    labels: ["January", "February", "March", "April", "May", "June", "July"],
+    datasets: [
+        {
+            label: "Klout Followers",
+            fillColor: "#e1e8ed",
+            strokeColor: "#292f33",
+            pointColor: "#55acee",
+            pointStrokeColor: "#3b5998",
+            pointHighlightFill: "#fff",
+            pointHighlightStroke: "rgba(220,220,220,1)",
+            data: [4, 9, 3, 1, 1, 0, 1]
+        }
+    ]
+};
+
+var context = $('#kloutlineChart').get(0).getContext('2d');
+var chart = new Chart(context).Line(data, options);
+
+
 
 

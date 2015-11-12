@@ -11,6 +11,7 @@
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="css/movie-page.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 </head>
 <body>
   <nav class="white" role="navigation">
@@ -35,19 +36,17 @@
     </div>
   </nav>
 
-  <div id="index-banner" class="parallax-container">
+  <div id="index-banner" class="parallax-container" style="min-height:250px;">
     <div class="section no-pad-bot">
       <div class="container">
         <br><br>
-        <h1 class="header center has-custom-shadow">The Revenant</h1>
+        <h1 class="header center has-custom-shadow">The Revenant - 2015</h1>
         <div class="row center">
-          <h5 class="header col s12 light">Trends and Such Releated to this Movie</h5>
+          <!-- <h5 class="header col s12 light">Trends and Such Releated to this Movie</h5> -->
         </div>
         <div class="row center">
           <a  href="#movie-detail" id="" class="btn-large waves-effect waves-light teal lighten-1">Get Started </a>
         </div>
-        <br><br>
-
       </div>
     </div>
     <div class="parallax"><img src="https://image.tmdb.org/t/p/w1280/mhAfV0vHUc7JmSzUdhWzwwJvoVb.jpg" alt="Unsplashed background img 1"></div>
@@ -55,57 +54,31 @@
 
   <div class="container">
     <div class="row">
-      <div class="col s12">
-        <ul class="tabs">
-          <li class="tab col s3"><a class="active" href="#test1">Trending</a></li>
-          <li class="tab col s3"><a href="#test2">Historical</a></li>
-          <li class="tab col s3"><a href="#test3">Critical</a></li>
-          <li class="tab col s3"><a href="#test4">Assets</a></li>
-        </ul>
-      </div>
-      <div id="test1" class="col s12"><canvas id="lineChart" width="800" height="200"></canvas></div>
-      <div id="test2" class="col s12">
-        <canvas id="chart" width="300" height="300"></canvas>
-      </div>
-      <div id="test3" class="col s12">Test 3</div>
-      <div id="test4" class="col s12">Test 4</div>
-    </div>
-  </div>
-
-  <div class="container">
-      <div class="row">
-        <div id="movie-detail" class="section scrollspy">
+      <div id="movie-detail" class="section scrollspy card">
         <div class="col s12">
-          <h2 class="center">The Revenant - 2015</h2>
+          <ul class="tabs">
+            <li class="tab col s3"><a class="active" href="#test1"><i class="fa fa-area-chart"></i> Review Score</a></li>
+            <li class="tab col s3"><a href="#test2"><i class="fa fa-facebook-official"></i> Facebook</a></li>
+            <li class="tab col s3"><a href="#test3"><i class="fa fa-twitter"></i> Twitter</a></li>
+            <li class="tab col s3"><a href="#test4"><i class="fa fa-tachometer"></i> Klout</a></li>
+          </ul>
         </div>
-
-        <div class="col s12 m3">
-   <!--        <canvas id="chart" width="200" height="200"></canvas> -->
+        <div id="test1" class="col s12">
+          <canvas id="lineChart" width="800" height="200"></canvas>
         </div>
-        <div class="col s12 m9">
-<!--           <canvas id="lineChart" width="800" height="200"></canvas> -->
+        <div id="test2" class="col s12">
+          <canvas id="fblineChart" width="800" height="200"></canvas>
+          <p>Facebook Total Likes: 200</p>
+          <a href="https://www.facebook.com/RevenantMovie/" target="_blank">RevenantMovie</a>
         </div>
-      </div>
-    </div>
-  </div>
-
-   <div class="container">
-    <div class="row">
-      <div class="col s12">
-        <!-- Modal Trigger -->
-        <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a>
-
-        <!-- Modal Structure -->
-        <div id="modal1" class="modal">
-          <div class="modal-content">
-            <div class="video-container">
-              <iframe width="853" height="480" src="https://www.youtube.com/embed/QRfj1VCg16Y" frameborder="0" allowfullscreen></iframe>
-            </div>
-          </div>
-          <div class="modal-footer">
-            <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Close</a>
-            <a class="btn-floating red"><i class="material-icons">new_releases</i></a>
-          </div>
+        <div id="test3" class="col s12">
+          <canvas id="twitterlineChart" width="800" height="200"></canvas>
+          <p>Twitter Followers: 200</p>
+          <a href="https://twitter.com/revenantmovie" target="_blank">@RevenantMovie</a>
+        </div>
+        <div id="test4" class="col s12">
+          <canvas id="kloutlineChart" width="800" height="200"></canvas>
+          <p>Social Media Score: 200</p>
         </div>
       </div>
     </div>
@@ -113,10 +86,14 @@
   <div class="container">
     <div class="row">
       <div class="col s2">
-        <img src="https://image.tmdb.org/t/p/w396/oXUWEc5i3wYyFnL1Ycu8ppxxPvs.jpg" style="max-width:100%;">
+        <img src="https://image.tmdb.org/t/p/w396/oXUWEc5i3wYyFnL1Ycu8ppxxPvs.jpg" class="responsive-img">
       </div>
       <div class="col s10">
         <p>The Revenant is an upcoming American biographical Western thriller film directed by Alejandro G. Iñárritu. The screenplay by Mark L. Smith and Iñárritu is based on Michael Punke's 2002 novel of the same name. It is inspired by the life of frontiersman Hugh Glass (c. 1780–1833). The film stars Leonardo DiCaprio, Tom Hardy, Will Poulter, and Domhnall Gleeson.</p>
+
+        <!-- Modal Trigger -->
+        <a class="waves-effect waves-light btn modal-trigger" href="#modal1"><i class="material-icons right">play_circle_filled</i>Watch The Trailer</a>
+
       </div>
     </div>
   </div>
@@ -140,10 +117,12 @@
           <div class="chip">
             Frontier
           </div>
+          <div class="chip">
+            Based on Novel
+          </div>
       </div>
     </div>
   </div>
-
   <div class="container">
     <div class="row">
       <div class="col s12">
@@ -153,16 +132,17 @@
             <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
           </li>
           <li>
-            <div class="collapsible-header"><i class="material-icons">movie</i>Production</div>
-            <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
-          </li>
-          <li>
-            <div class="collapsible-header"><i class="mdi-av-play-shopping-bag"></i>Video Editor</div>
-            <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+            <div class="collapsible-header"><i class="material-icons">movie</i>Crew</div>
+            <div class="collapsible-body">
+              <ul class="user-list"></ul>
+              <div class="loading">Loading...</div>
+            </div>
           </li>
           <li>
             <div class="collapsible-header"><i class="material-icons">face</i>Cast</div>
-            <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+            <div class="collapsible-body">
+             <ul class="user-list"></ul>
+              <div class="loading">Loading...</div>
           </li>
         </ul>
       </div>
@@ -199,6 +179,7 @@
         <div class="col s12 m4">
           <div class="icon-block">
             <h2 class="center brown-text"><i class="material-icons">flash_on</i></h2>
+            <canvas id="chart" width="300" height="300"></canvas>
             <h5 class="center">Speeds up development</h5>
 
             <p class="light">We did most of the heavy lifting for you to provide a default stylings that incorporate our custom components. Additionally, we refined animations and transitions to provide a smoother experience for developers.</p>
@@ -300,6 +281,16 @@
       </div>
     </div>
   </footer>
+
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal">
+    <div class="modal-content" style="padding:0;">
+      <div class="video-container">
+        <iframe width="853" height="480" src="https://www.youtube.com/embed/QRfj1VCg16Y?rel=0&amp;controls=1&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <a href="#!" class="modal-action modal-close waves-effect waves-red btn-floating red " style="position:absolute; right:0; top:0;"><i class="material-icons">cancel</i></a>
+    </div>
+  </div>
 
 
   <!--  Scripts-->

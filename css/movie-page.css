@@ -1,2 +1,12 @@
 .has-custom-shadow {
   text-shadow: #111 3px 3px 0; }
+
+.collapsible-body {
+  padding: 5px; }
+  .collapsible-body p {
+    padding: 1rem; }
+
+.user-list > .chip {
+  margin: 10px; }
+
+/*# sourceMappingURL=movie-page.css.map */
