@@ -10,7 +10,13 @@
         selectMonths: true, // Creates a dropdown to control month
         selectYears: 15 // Creates a dropdown of 15 years to control year
       });
-    $('.slider').slider({full_width: true});
+    $('.slider').slider({
+      full_width: true,
+      //indicators: false,
+      //height: 100,
+      //transition: 20,
+      //interval: 100
+    });
 
     // Start Create Rendom user
     var url = "https://randomuser.me/api/?";
@@ -47,6 +53,16 @@
         });
      }); // end of random user
 
+
+    //slider aspect ratio
+    $(window).resize(function(){
+        // If there are multiple elements with the same class, "main"
+        $('.instagram-slider').each(function() {
+            $(this).height($(this).width());
+            $(this).parent().css( {'height':'auto', 'padding-bottom': '40px'});
+        });
+    }).resize(); //end slider aspect ratio
+
   }); // end of document ready
 })(jQuery); // end of jQuery name space
 
@@ -56,6 +72,9 @@
 	  //$('.video-container').hide();
 	  $('.video-container iframe').attr("src", jQuery(".video-container iframe").attr("src"));
 	});
+
+
+
 
 
 // You can programmatically trigger a tab change with our select_tab

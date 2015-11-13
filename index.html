@@ -65,30 +65,58 @@
           </ul>
         </div>
         <div id="test1" class="col s12">
-          <canvas id="lineChart" width="800" height="200"></canvas>
-          <p>IMDB Average: 69% </p>
-          <p>MetaCritic Average: 0%</p>
-          <p>RottenTomatoes Average: 98%</p>
-
+          <div class="col s9">
+            <canvas id="lineChart"></canvas>
+          </div>
+          <div class="col s3">
+            <h6>IMDB Average: 69% </h6>
+            <p>MetaCritic Average: 0%</p>
+            <p>RottenTomatoes Average: 98%</p>
+          </div>
         </div>
-        <div id="test2" class="col s12">
-          <canvas id="fblineChart" width="800" height="200"></canvas>
-          <p>Facebook Total Likes: 200</p>
-          <a href="https://www.facebook.com/RevenantMovie/" target="_blank">RevenantMovie</a>
+        <div id="test2">
+          <div class="col s9">
+          <canvas id="fblineChart"></canvas>
+          </div>
+          <div class="col s3">
+            <p>Facebook Daily Likes</p>
+            <p></p>
+            <a href="https://www.facebook.com/RevenantMovie/" target="_blank">RevenantMovie</a>
+          </div>
         </div>
         <div id="test3" class="col s12">
-          <canvas id="twitterlineChart" width="800" height="200"></canvas>
-          <p>Twitter Followers: 200</p>
-          <a href="https://twitter.com/revenantmovie" target="_blank">@RevenantMovie</a>
+          <div class="col s9">
+            <canvas id="twitterlineChart"></canvas>
+          </div>
+          <div class="col s3">
+            <p>Twitter Followers:</p>
+            <p>400</p>
+            <a href="https://twitter.com/revenantmovie" target="_blank">@RevenantMovie</a>
+          </div>
         </div>
         <div id="test4" class="col s12">
-          <canvas id="kloutlineChart" width="800" height="200"></canvas>
-          <p>Social Media Score: 200</p>
+          <div class="col s9">
+            <canvas id="kloutlineChart"></canvas>
+          </div>
+          <div class="col s3">
+            <p>Social Media Score:</p>
+            <p>400</p>
+            <a href="https://twitter.com/revenantmovie" target="_blank">@RevenantMovie</a>
+          </div>
         </div>
-        <div id="test5" class="col s12">
 
-          <p>Followers: 1,185</p>
-          <a href="https://www.instagram.com/revenantmovie/" target="_blank"><i class="fa fa-instagram"></i> RevenantMovie</a>
+        <div id="test5" class="col s12">
+          <div class="col s9">
+            <canvas id="instagramlineChart"></canvas>
+          </div>
+          <div class="col s3">
+            <p>Posts: 28</p>
+            <p>Followers: 1,185</p>
+            <a href="https://www.instagram.com/revenantmovie/" target="_blank"><i class="fa fa-instagram"></i> RevenantMovie</a>
+          </div>
+        </div>
+
+
         </div>
       </div>
     </div>
@@ -166,7 +194,7 @@
         <div class="col s12 m7">
           INSTAGRAM FEED
           <div class="slider">
-            <ul class="slides">
+            <ul class="slides instagram-slider">
               <li>
                 <img src="https://scontent-sea1-1.cdninstagram.com/hphotos-xap1/t51.2885-15/e35/12120512_1705800949653260_992175372_n.jpg"> <!-- random image -->
                 <div class="caption left-align">
@@ -237,9 +265,25 @@
       </div>
     </div>
   </div> -->
-
-
-
+<div class="container">
+  <div class="row">
+    <div class="col s4">
+      <div class="chart">
+        <canvas class="skill" skilled-pct="40" skilled-color="#4679BD" width="300" height="300"></canvas>
+      </div>
+    </div>
+    <div class="col s4">
+      <div class="chart">
+        <canvas class="skill" skilled-pct="80" skilled-color="#F9CA56" width="300" height="300"></canvas>
+      </div>
+    </div>
+    <div class="col s4">
+      <div class="chart">
+        <canvas class="skill" skilled-pct="50" skilled-color="#E38981" width="300" height="300"></canvas>
+      </div>
+    </div>
+  </div>
+</div>
 
   <footer class="page-footer teal">
     <div class="container">

@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAGA,kBAAmB;EC+Rf,WAAW,ED9RQ,cAAe;;AAItC,iBAAkB;EAChB,OAAO,EAAE,GAAG;EACZ,mBAAC;IACC,OAAO,EAAE,IAAI;;AAKjB,kBAAmB;EACjB,MAAM,EAAE,IAAI;;AAId,MAAO;EACL,OAAO,EAAE,KAAK;EACd,YAAQ;IACN,OAAO,EAAE,EAAE;IACX,OAAO,EAAE,KAAK;IACd,KAAK,EAAE,IAAI;;AAIf,eAAgB;EACd,gBAAgB,EAAE,OAAO;;AAE3B,UAAW;EAET,UAAU,EAAE,iEAA+B;EAC3C,OAAO,EAAE,GAAG",
+"sources": ["../sass/movie-page.scss","../sass/components/_prefixer.scss"],
+"names": [],
+"file": "movie-page.css"
+}
