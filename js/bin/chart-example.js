@@ -1,74 +1,36 @@
-var data = [
-       {
-           value: 9.10,
-           color: "#F7464A",
-           highlight: "#FF5A5E",
-           //label: "9,42%"
-       },
-       {
-           value: 20.90,
-           color: "#46BFBD",
-           highlight: "#5AD3D1",
-           //label: "19,85%"
-       },
-       {
-           value: 70,
-           color: "#FDB45C",
-           highlight: "#FFC870",
-           //label: "Yellow"
-       }
-   ]
-
-
-var options =
-    {
-        tooltipTemplate: "<"+ "%= value %" + ">",
-        onAnimationComplete: function()
-        {
-            this.showTooltip(this.segments, true);
-        },
-        tooltipEvents: [],
-        showTooltips: true
-    }
-
-var context = $('#chart').get(0).getContext('2d');
-//var chart = new Chart(context).Pie(data, options);
-var chart = new Chart(context).Doughnut(data, options);
-
-
 
 
 var data = {
     labels: ["January", "February", "March", "April", "May", "June", "July"],
     datasets: [
         {
-            label: "My First dataset",
-            fillColor: "rgba(220,220,220,0.2)",
-            strokeColor: "rgba(220,220,220,1)",
-            pointColor: "rgba(220,220,220,1)",
+            label: "IMDB",
+            fillColor: "transparent",
+            strokeColor: "#999",
+            pointColor: "#f5de50",
             pointStrokeColor: "#fff",
-            pointHighlightFill: "#fff",
-            pointHighlightStroke: "rgba(220,220,220,1)",
+            //pointHighlightFill: "#fff",
+            pointHighlightStroke: "#f5de50",
             data: [65, 59, 80, 81, 56, 55, 40]
         },
         {
-            label: "My Second dataset",
-            fillColor: "rgba(151,187,205,0.2)",
-            strokeColor: "rgba(151,187,205,1)",
-            pointColor: "rgba(151,187,205,1)",
+            label: "ROTTEN TOMATOES",
+            fillColor: "transparent",
+            strokeColor: "#3A9425",
+            pointColor: "#E8372C",
             pointStrokeColor: "#fff",
-            pointHighlightFill: "#fff",
-            pointHighlightStroke: "rgba(151,187,205,1)",
+            //pointHighlightFill: "#fff",
+            pointHighlightStroke: "#E8372C",
             data: [28, 48, 40, 19, 86, 27, 90]
         },
         {
-            label: "My Third dataset",
-            fillColor: "rgba(39, 185, 154, 0.52)",
-            strokeColor: "rgba(39, 185, 154, 1);",
-            pointColor: "rgba(39, 185, 154, 1)",
+            label: "META CRITIC",
+            fillColor: "transparent",
+            strokeColor: "#1b81a0",
+            pointColor: "#6c3",
             pointStrokeColor: "#fff",
-            pointHighlightFill: "#fff",
-            pointHighlightStroke: "rgba(151,187,205,1)",
+            //pointHighlightFill: "#fff",
+            pointHighlightStroke: "#6c3",
             data: [8, 38, 90, 67, 26, 7, 80]
         }
     ]

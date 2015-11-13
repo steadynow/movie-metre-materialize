@@ -10,7 +10,7 @@
         selectMonths: true, // Creates a dropdown to control month
         selectYears: 15 // Creates a dropdown of 15 years to control year
       });
-
+    $('.slider').slider({full_width: true});
 
     // Start Create Rendom user
     var url = "https://randomuser.me/api/?";

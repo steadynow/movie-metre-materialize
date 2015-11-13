@@ -18,3 +18,21 @@
   margin: 10px;
 
 }
+
+.block {
+  display: block;
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+.slider .slides {
+  background-color: #FFFFFF;
+}
+.slides li {
+  //border: 1px solid red;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  padding: 3px;
+}
