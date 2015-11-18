@@ -207,43 +207,6 @@ var chart = new Chart(context).Line(data, options);
 
 
 
-
-
-
-
-
-// var pie = document.getElementById("pieChart").getContext("2d");
-// new Chart(pie).Doughnut([
-//   { value: 50, color: "rgba(180,100,100,1)", label: "Red" },
-//   { value: 50, color: '#424647',label: "brown" }
-// ], {
-//   segmentShowStroke: false,
-//   percentageInnerCutout : 70,
-//   responsive: true,
-// });
-
-// var pie2 = document.getElementById("pieChart2").getContext("2d");
-// new Chart(pie2).Doughnut([
-//   { value: 80, color: "rgba(180,100,100,.75)" },
-//   { value: 20, color: '#424647' }
-// ], {
-//   segmentShowStroke: false,
-//   percentageInnerCutout : 70,
-//   responsive: true,
-// });
-
-// var pie3 = document.getElementById("pieChart3").getContext("2d");
-// new Chart(pie3).Doughnut([
-//   { value: 90, color: "rgba(180,100,100,.5)" },
-//   { value: 10, color: '#424647' }
-// ], {
-//   segmentShowStroke: false,
-//   percentageInnerCutout : 70,
-//   responsive: true,
-// });
-
-
-
 //these options are common to all skills
 var options = {
 

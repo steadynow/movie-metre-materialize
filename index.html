@@ -36,7 +36,7 @@
     </div>
   </nav>
 
-  <div id="index-banner" class="parallax-container" style="min-height:250px;">
+  <div id="index-banner" class="parallax-container">
     <div class="section no-pad-bot">
       <div class="container">
         <br><br>
@@ -225,6 +225,8 @@
               </li>
             </ul>
           </div>
+
+          <div id="instafeed"></div>
         </div>
       </div>
     </div>
@@ -332,7 +334,36 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
   <script src="js/bin/chart-example.js"></script>
   <script src="js/bin/materialize.min.js"></script>
+  <script src="js/bin/instafeed.min.js"></script>
   <script src="js/bin/init.js"></script>
+
+  <script type="text/javascript">
+
+    var feed = new Instafeed({
+  clientId: '199ebfca8daf4c95b251855eeee7fdbf',
+  limit: 20,
+  sortBy: 'most-liked',
+  get: 'user',
+  userId: '1357155477',
+
+  after: function () {
+    var images = $("#instafeed").find('a');
+    $.each(images, function(index, image) {
+      var delay = (index * 75) + 'ms';
+      $(image).css('-webkit-animation-delay', delay);
+      $(image).css('-moz-animation-delay', delay);
+      $(image).css('-ms-animation-delay', delay);
+      $(image).css('-o-animation-delay', delay);
+      $(image).css('animation-delay', delay);
+      $(image).addClass('animated flipInX');
+    });
+  },
+  template: '<a href="{{link}}" target="_blank"><img src="{{image}}" /><div class="likes">&hearts; {{likes}}</div></a>'
+});
+feed.run();
+
+
+</script>
 
   </body>
 </html>

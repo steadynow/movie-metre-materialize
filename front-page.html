@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+  <title>Movie Metre</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/movie-page.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+</head>
+<body>
+  <nav class="white" role="navigation">
+    <div class="nav-wrapper container">
+      <a id="logo-container" href="#" class="brand-logo">Movie Metre </a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#">Navbar Link</a></li>
+        <li>
+          <a href="#">
+            <div class="chip">
+              <img src="https://s3.amazonaws.com/uifaces/faces/twitter/dancounsell/128.jpg" alt="Contact Person">
+              User Name
+            </div>
+          </a>
+        </li>
+      </ul>
+
+      <ul id="nav-mobile" class="side-nav">
+        <li><a href="#">Navbar Link</a></li>
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+
+
+
+
+
+
+  <div class="container">
+    <div class="section">
+      <div class="row">
+
+        <div class="col s12">
+            <table class="highlight bordered centered" id="simpleTable">
+              <thead>
+                <tr>
+                    <th data-field="id" data-sort="string">Movie</th>
+                    <th data-field="facebook" data-sort="int"><i class="fa fa-facebook-official"></i> Facebook</th>
+                    <th data-field="twitter" data-sort="int"><i class="fa fa-twitter"></i> Twitter</th>
+                    <th data-field="instagram" data-sort="int"><i class="fa fa-instagram"></i> Instagram</th>
+                    <th data-field="swing" data-sort="int"><i class="fa fa-tachometer"></i> Score</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td>Legend</td>
+                  <td>131474</td>
+                  <td>87</td>
+                  <td>7</td>
+                  <td>67</td>
+                </tr>
+                <tr>
+                  <td>The Revenant</td>
+                  <td>2257</td>
+                  <td>76</td>
+                  <td>8</td>
+                  <td>47</td>
+                </tr>
+                <tr>
+                  <td>Elf</td>
+                  <td>12444</td>
+                  <td>70</td>
+                  <td>6</td>
+                  <td>87</td>
+                </tr>
+              </tbody>
+            </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col s4">
+      <div class="chart">
+        <canvas class="skill" skilled-pct="40" skilled-color="#4679BD" width="300" height="300"></canvas>
+      </div>
+    </div>
+    <div class="col s4">
+      <div class="chart">
+        <canvas class="skill" skilled-pct="80" skilled-color="#F9CA56" width="300" height="300"></canvas>
+      </div>
+    </div>
+    <div class="col s4">
+      <div class="chart">
+        <canvas class="skill" skilled-pct="50" skilled-color="#E38981" width="300" height="300"></canvas>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <footer class="page-footer teal">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Movie Metre</h5>
+          <p class="grey-text text-lighten-4">Taking the Pulse of the movie industry.</p>
+
+
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Settings</h5>
+          <ul>
+            <li><a class="white-text" href="#!">Link 1</a></li>
+
+          </ul>
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Connect</h5>
+          <ul>
+            <li><a class="white-text" href="#!">Link 1</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      Made by <a class="brown-text text-lighten-3" href="http://20yearmedia.com/">20YearMedia</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal">
+    <div class="modal-content" style="padding:0;">
+      <div class="video-container">
+        <iframe width="853" height="480" src="https://www.youtube.com/embed/QRfj1VCg16Y?rel=0&amp;controls=1&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <a href="#!" class="modal-action modal-close waves-effect waves-red btn-floating red " style="position:absolute; right:0; top:0;"><i class="material-icons">cancel</i></a>
+    </div>
+  </div>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
+  <script src="js/bin/chart-example.js"></script>
+  <script src="js/bin/materialize.min.js"></script>
+  <script src="js/bin/stupidtable.min.js"></script>
+  <script src="js/bin/instafeed.min.js"></script>
+  <script src="js/bin/init.js"></script>
+    <script>
+    $(function(){
+        $("table").stupidtable();
+    });
+  </script>
+
+  </body>
+</html>
