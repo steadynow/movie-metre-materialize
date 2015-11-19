@@ -6,17 +6,12 @@
     $('.scrollspy').scrollSpy();
     $('.modal-trigger').leanModal();
     $('ul.tabs').tabs();
+    $('.tooltipped').tooltip({delay: 50});
     $('.datepicker').pickadate({
         selectMonths: true, // Creates a dropdown to control month
         selectYears: 15 // Creates a dropdown of 15 years to control year
       });
-    $('.slider').slider({
-      full_width: true,
-      //indicators: false,
-      //height: 100,
-      //transition: 20,
-      //interval: 100
-    });
+
 
     // Start Create Rendom user
     var url = "https://randomuser.me/api/?";

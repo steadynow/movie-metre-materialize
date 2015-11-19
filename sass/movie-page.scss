@@ -27,12 +27,47 @@
 
 .slider .slides {
   background-color: #FFFFFF;
+  height: 100%;
+  width:100%;
 }
 
 .slides li {
   //border: 1px solid red;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
   padding: 3px;
+}
+
+.slider .slides li .caption {
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.8);
+    text-shadow: 2px 2px 2px #000;
+    position: absolute;
+    top: 75%;
+    left: 0%;
+    width: 100%;
+    opacity: 0;
+}
+
+#tweecool ul li img {
+  float: left;
+  margin-right: 10px;
+}
+
+.action-box ul {
+  display: block;
+  margin-top:5px;
+  margin-bottom: 10px;
+  clear: both;
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  li {
+    float: left;
+    margin-right: 10px;
+    display: block;
+  }
 }
 
 .sorting-asc {

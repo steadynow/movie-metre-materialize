@@ -191,42 +191,18 @@
   <div class="container">
     <div class="section">
       <div class="row">
-        <div class="col s12 m7">
-          INSTAGRAM FEED
+        <div class="col s12 m6">
+          <i class="fa fa-instagram"></i> INSTAGRAM FEED
           <div class="slider">
-            <ul class="slides instagram-slider">
-              <li>
-                <img src="https://scontent-sea1-1.cdninstagram.com/hphotos-xap1/t51.2885-15/e35/12120512_1705800949653260_992175372_n.jpg"> <!-- random image -->
-                <div class="caption left-align">
-                  <h3><i class="fa fa-instagram"></i> 115 likes</h3>
-                  <!-- <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5> -->
-                </div>
-              </li>
-              <li>
-                <img src="https://scontent-sea1-1.cdninstagram.com/hphotos-xap1/t51.2885-15/e35/12139734_1708932862671841_1294233470_n.jpg"> <!-- random image -->
-                <div class="caption left-align">
-                  <h3><i class="fa fa-instagram"></i> 290 likes</h3>
-                  <!-- <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5> -->
-                </div>
-              </li>
-              <li>
-                <img src="https://scontent-sea1-1.cdninstagram.com/hphotos-xpt1/t51.2885-15/e35/12224164_1097726590261326_502045696_n.jpg"> <!-- random image -->
-                <div class="caption left-align">
-                  <h3><i class="fa fa-instagram"></i> 74 likes</h3>
-                  <!-- <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5> -->
-                </div>
-              </li>
-              <li>
-                <img src="https://scontent-sea1-1.cdninstagram.com/hphotos-xpt1/t51.2885-15/e35/10950327_1498725253755495_493594190_n.jpg"> <!-- random image -->
-                <div class="caption left-align">
-                  <h3><i class="fa fa-instagram"></i> 104 likes</h3>
-                  <!-- <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5> -->
-                </div>
-              </li>
+            <ul class="slides instagram-slider" id="instafeed">
             </ul>
           </div>
+        </div>
+        <div class="col s12 m6">
+          <i class="fa fa-twitter"></i> TWITTER FEED
+          <div class="card" id="tweecool">
 
-          <div id="instafeed"></div>
+          </div>
         </div>
       </div>
     </div>
@@ -234,39 +210,19 @@
 
 
 
-<!--   <div class="container">
+   <div class="container">
     <div class="section">
       <div class="row">
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h2 class="center brown-text"><i class="material-icons">flash_on</i></h2>
-
-            <h5 class="center">Speeds up development</h5>
-
-            <p class="light">We did most of the heavy lifting for you to provide a default stylings that incorporate our custom components. Additionally, we refined animations and transitions to provide a smoother experience for developers.</p>
-          </div>
-        </div>
-
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h2 class="center brown-text"><i class="material-icons">group</i></h2>
-            <h5 class="center">User Experience Focused</h5>
-
-            <p class="light">By utilizing elements and principles of Material Design, we were able to create a framework that incorporates components and animations that provide more feedback to users. Additionally, a single underlying responsive system across all platforms allow for a more unified user experience.</p>
-          </div>
-        </div>
-
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h2 class="center brown-text"><i class="material-icons">settings</i></h2>
-            <h5 class="center">Easy to work with</h5>
-
-            <p class="light">We have provided detailed documentation as well as specific code examples to help new users get started. We are also always open to feedback and can answer any questions a user may have about Materialize.</p>
-          </div>
+        <div class="col s12">
+          <div id="example1"></div>
+          <div id="example2"></div>
+          <div id="example3"></div>
+          <div id="example4"></div>
+          <div id="example5"></div>
         </div>
       </div>
     </div>
-  </div> -->
+  </div>
 <div class="container">
   <div class="row">
     <div class="col s4">
@@ -336,34 +292,44 @@
   <script src="js/bin/materialize.min.js"></script>
   <script src="js/bin/instafeed.min.js"></script>
   <script src="js/bin/init.js"></script>
-
+  <script src="js/bin/tweecool.js"></script>
   <script type="text/javascript">
 
     var feed = new Instafeed({
   clientId: '199ebfca8daf4c95b251855eeee7fdbf',
-  limit: 20,
+  limit: 10,
   sortBy: 'most-liked',
   get: 'user',
-  userId: '1357155477',
-
+  userId: '1421556630',
+resolution: 'standard_resolution',
   after: function () {
-    var images = $("#instafeed").find('a');
-    $.each(images, function(index, image) {
-      var delay = (index * 75) + 'ms';
-      $(image).css('-webkit-animation-delay', delay);
-      $(image).css('-moz-animation-delay', delay);
-      $(image).css('-ms-animation-delay', delay);
-      $(image).css('-o-animation-delay', delay);
-      $(image).css('animation-delay', delay);
-      $(image).addClass('animated flipInX');
+      $('.slider').slider({
+      full_width: true,
+      //indicators: false,
+      //height: 100,
+      //transition: 20,
+      //interval: 100
     });
   },
-  template: '<a href="{{link}}" target="_blank"><img src="{{image}}" /><div class="likes">&hearts; {{likes}}</div></a>'
+  template: '<li><a href="{{link}}" target="_blank"><img src="{{image}}" /></a><div class="caption left-align"><h3><i class="fa fa-instagram"></i> {{likes}} likes</h3></div></li>'
 });
 feed.run();
 
 
 </script>
+<script>
+  $(document).ready(function() {
+      $('#tweecool').tweecool({
+        //settings
+         username : 'revenantmovie',
+         limit : 5,
+         show_actions: true,
+         show_retweeted_text: true,
+      });
+  });
+</script>
+
+
 
   </body>
 </html>
