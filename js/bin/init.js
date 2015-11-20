@@ -70,7 +70,9 @@
 
 
 
-
+ $(document).ready(function(){
+    $('.scrollto-wrapper').pushpin({ top: $('.scrollto-wrapper').offset().top });
+  });
 
 // You can programmatically trigger a tab change with our select_tab
 // $(document).ready(function(){
